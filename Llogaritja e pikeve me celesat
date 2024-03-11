@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main() {
+    int n;
+    int pikët = 0;
+    char portaFillestare = 'C';
+    char portaAktuale;
+    printf("Vendos numrin e hedhjeve të topit:");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        printf("Vendos portën ku hidhet topi %d (A/B/C/D): ", i + 1);
+        scanf(" %c", &portaAktuale);
+        if (portaAktuale == 'D') {
+            pikët++;
+            printf("Ju fituat 1 pikë!\n");
+        }
+        else if (portaAktuale == 'C') {
+            printf("Ju fituat 0 pikë!\n");
+        }
+        if (portaAktuale == 'A' || portaAktuale == 'B') {
+            printf("Celësat x1 dhe x3 ndryshojnë kah, gjendje. \n");
+        } else if (portaAktuale == 'C' && (portaFillestare == 'A' || portaFillestare == 'B')) {
+            printf("Celesi x2 ndryshon kah, gjendje \n");
+        }
+        portaFillestare = portaAktuale;
+    } 
+    printf("Numri total i pikëve: %d\n", pikët); 
+    return 0;
+}
