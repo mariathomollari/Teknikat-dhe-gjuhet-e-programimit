@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    printf("Vendos notën në formë numerike: ");
+    int pikët;
+    scanf("%d", &pikët);
+    int shifra = pikët % 10;
+    switch (pikët / 10) {
+        case 10:
+        case 9:
+            printf("Nota: A\n");
+            break;
+        case 8:
+            printf("Nota: B\n");
+            break;
+        case 7:
+            printf("Nota: C\n");
+            break;
+        case 6:
+            printf("Nota: D\n");
+            break;
+        default:
+            printf("Nota: F\n");
+            break;
+    } 
+    
+    return 0;
+}
